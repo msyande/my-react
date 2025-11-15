@@ -1,0 +1,30 @@
+{
+  "name": "my-react",
+  "version": "1.0.0",
+  "description": "This is npm by Mahima Yande",
+  "keywords": [],
+  "homepage": "https://github.com/msyande/my-react#readme",
+  "bugs": {
+    "url": "https://github.com/msyande/my-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msyande/my-react.git"
+  },
+  "license": "ISC",
+  "author": "Mahima Yande",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserlist": [
+    "last 2 version"
+  ]
+}

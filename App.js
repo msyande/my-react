@@ -1,11 +1,14 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I'm an H1 tab!"),
-    React.createElement("h2", {}, "I'm an H2 tab!"),
+  React.createElement("div", { id: "child1", key: "child1" }, [
+    React.createElement("h1", { key: "c1-h1" }, "I'm an H1 tab!💜"),
+    React.createElement("h2", { key: "c1-h2" }, "I'm an H2 tab!💛"),
   ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an H1 tab!"),
-    React.createElement("h2", {}, "I'm an H2 tab!"),
+  React.createElement("div", { id: "child2", key: "child2" }, [
+    React.createElement("h1", { key: "c2-h1" }, "I'm an H1 tab!💜"),
+    React.createElement("h2", { key: "c2-h2" }, "I'm an H2 tab!💛"),
   ]),
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
