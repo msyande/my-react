@@ -1,15 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1", key: "child1" }, [
-    React.createElement("h1", { key: "c1-h1" }, "I'm an H1 tab!💜"),
-    React.createElement("h2", { key: "c1-h2" }, "I'm an H2 tab!💛"),
-  ]),
-  React.createElement("div", { id: "child2", key: "child2" }, [
-    React.createElement("h1", { key: "c2-h1" }, "I'm an H1 tab!💜"),
-    React.createElement("h2", { key: "c2-h2" }, "I'm an H2 tab!💛"),
-  ]),
-]);
+//React Element
+const jsxHeading = <h1 className="heading">This is JSX Heading🚀</h1>;
+console.log(jsxHeading); // Output: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
+
+//Functional Component
+const HeadingComponent1 = () => {
+  return <h1 className="heading">This is a Functional Component Heading🔥</h1>;
+};
+console.log(HeadingComponent1()); // Output: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
+
+const HeadingComponent2 = () => (
+  <h1 className="heading">This is a Functional Component Heading🔥</h1>
+); //HeadingComponent1 === HeadingComponent2
+
+const Title = () => <h1>Mahima Yande</h1>; //Functional Component
+const title2 = <h1>Siddharth Suchak</h1>; //React Element
+
+//Component Composition
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <Title />
+      {title2}
+      <h1 className="heading">This is a Functional Component Heading🔥</h1>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// root.render(jsxHeading);
+root.render(<HeadingComponent />);
